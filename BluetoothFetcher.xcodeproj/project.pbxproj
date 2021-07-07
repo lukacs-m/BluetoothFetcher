@@ -7,10 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B80DF7532695EBBB00FCB63B /* DevicesListViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B80DF7522695EBBB00FCB63B /* DevicesListViewModelTests.swift */; };
+		B80DF7572695FBF100FCB63B /* BluetoothDeviceRepositoryTestings.swift in Sources */ = {isa = PBXBuildFile; fileRef = B80DF7562695FBF100FCB63B /* BluetoothDeviceRepositoryTestings.swift */; };
+		B80DF75A2695FCB900FCB63B /* Resolver+TestExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B80DF7592695FCB900FCB63B /* Resolver+TestExtensions.swift */; };
 		B894D249269301BB00340B4C /* BluetoothFetcherApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B894D248269301BB00340B4C /* BluetoothFetcherApp.swift */; };
 		B894D24D269301BC00340B4C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B894D24C269301BC00340B4C /* Assets.xcassets */; };
 		B894D250269301BC00340B4C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B894D24F269301BC00340B4C /* Preview Assets.xcassets */; };
-		B894D25B269301BC00340B4C /* BluetoothFetcherTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B894D25A269301BC00340B4C /* BluetoothFetcherTests.swift */; };
 		B894D266269301BC00340B4C /* BluetoothFetcherUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B894D265269301BC00340B4C /* BluetoothFetcherUITests.swift */; };
 		B894D275269301EC00340B4C /* Resolver in Frameworks */ = {isa = PBXBuildFile; productRef = B894D274269301EC00340B4C /* Resolver */; };
 		B894D2782693022500340B4C /* SwiftUICombineToolBox in Frameworks */ = {isa = PBXBuildFile; productRef = B894D2772693022500340B4C /* SwiftUICombineToolBox */; };
@@ -47,13 +49,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B80DF7522695EBBB00FCB63B /* DevicesListViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevicesListViewModelTests.swift; sourceTree = "<group>"; };
+		B80DF7562695FBF100FCB63B /* BluetoothDeviceRepositoryTestings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BluetoothDeviceRepositoryTestings.swift; sourceTree = "<group>"; };
+		B80DF7592695FCB900FCB63B /* Resolver+TestExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Resolver+TestExtensions.swift"; sourceTree = "<group>"; };
 		B894D245269301BB00340B4C /* BluetoothFetcher.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BluetoothFetcher.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B894D248269301BB00340B4C /* BluetoothFetcherApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BluetoothFetcherApp.swift; sourceTree = "<group>"; };
 		B894D24C269301BC00340B4C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B894D24F269301BC00340B4C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		B894D251269301BC00340B4C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B894D256269301BC00340B4C /* BluetoothFetcherTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BluetoothFetcherTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		B894D25A269301BC00340B4C /* BluetoothFetcherTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BluetoothFetcherTests.swift; sourceTree = "<group>"; };
 		B894D25C269301BC00340B4C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B894D261269301BC00340B4C /* BluetoothFetcherUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BluetoothFetcherUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B894D265269301BC00340B4C /* BluetoothFetcherUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BluetoothFetcherUITests.swift; sourceTree = "<group>"; };
@@ -100,6 +104,39 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B80DF7512695EB7F00FCB63B /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				B80DF7522695EBBB00FCB63B /* DevicesListViewModelTests.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		B80DF7542695FBD000FCB63B /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				B80DF7582695FCA400FCB63B /* Extensions */,
+				B80DF7552695FBE200FCB63B /* Mocks */,
+			);
+			path = Tools;
+			sourceTree = "<group>";
+		};
+		B80DF7552695FBE200FCB63B /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				B80DF7562695FBF100FCB63B /* BluetoothDeviceRepositoryTestings.swift */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
+		B80DF7582695FCA400FCB63B /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				B80DF7592695FCB900FCB63B /* Resolver+TestExtensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		B894D23C269301BB00340B4C = {
 			isa = PBXGroup;
 			children = (
@@ -142,7 +179,8 @@
 		B894D259269301BC00340B4C /* BluetoothFetcherTests */ = {
 			isa = PBXGroup;
 			children = (
-				B894D25A269301BC00340B4C /* BluetoothFetcherTests.swift */,
+				B80DF7542695FBD000FCB63B /* Tools */,
+				B80DF7512695EB7F00FCB63B /* ViewModels */,
 				B894D25C269301BC00340B4C /* Info.plist */,
 			);
 			path = BluetoothFetcherTests;
@@ -465,7 +503,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B894D25B269301BC00340B4C /* BluetoothFetcherTests.swift in Sources */,
+				B80DF75A2695FCB900FCB63B /* Resolver+TestExtensions.swift in Sources */,
+				B80DF7532695EBBB00FCB63B /* DevicesListViewModelTests.swift in Sources */,
+				B80DF7572695FBF100FCB63B /* BluetoothDeviceRepositoryTestings.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

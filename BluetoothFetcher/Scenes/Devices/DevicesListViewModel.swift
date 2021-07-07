@@ -24,10 +24,12 @@ final class DevicesListViewModel: ObservableObject {
         setUp()
     }
 
+    /// Function called to start the scan of the surrounding bluetooth devices
     func startScanningForDevices() {
         bluetoothRepository.startScanning()
     }
 
+    /// Function called to stop the current scan
     func stopscanningForDevices() {
         bluetoothRepository.stopScanning()
     }

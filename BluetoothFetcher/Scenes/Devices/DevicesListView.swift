@@ -12,6 +12,7 @@ import Resolver
 import SwiftUI
 import SwiftUICombineToolBox
 
+/// Main display of surrounding devices
 struct DevicesListView: View {
     @InjectedObject private var viewModel: DevicesListViewModel
     @Injected private var router: MainNavigation

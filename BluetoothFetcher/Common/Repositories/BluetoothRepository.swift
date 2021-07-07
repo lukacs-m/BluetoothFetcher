@@ -9,6 +9,7 @@ import Combine
 import CoreBluetooth
 import Foundation
 
+/// Contains all usefull information on a specific bluetooth device
 struct BluetoothDeviceInfo: Identifiable {
     let id: UUID
     let rssi: NSNumber
@@ -17,6 +18,7 @@ struct BluetoothDeviceInfo: Identifiable {
     let isConnectable: Bool
 }
 
+/// Main protocol
 protocol BluetoothDeviceServicing {
     // MARK: - Central Service
 
@@ -40,10 +42,10 @@ final class BluetoothRepository: NSObject, BluetoothDeviceServicing {
     private var centralManager: CBCentralManager!
     private var peripheralDevice: CBPeripheral?
 
-    var isCurrentlyScanning = CurrentValueSubject<Bool, Never>(false)
-    var currentNearbyDevices = CurrentValueSubject<[UUID: BluetoothDeviceInfo], Never>([:])
-    var currentServices = CurrentValueSubject<[CBService], Never>([])
-    var currentCharactericstics = CurrentValueSubject<[CBUUID: [CBCharacteristic]], Never>([:])
+    private(set) var isCurrentlyScanning = CurrentValueSubject<Bool, Never>(false)
+    private(set) var currentNearbyDevices = CurrentValueSubject<[UUID: BluetoothDeviceInfo], Never>([:])
+    private(set) var currentServices = CurrentValueSubject<[CBService], Never>([])
+    private(set) var currentCharactericstics = CurrentValueSubject<[CBUUID: [CBCharacteristic]], Never>([:])
 
     override init() {
         super.init()
@@ -91,11 +93,9 @@ final class BluetoothRepository: NSObject, BluetoothDeviceServicing {
 extension BluetoothRepository: CBCentralManagerDelegate {
     func centralManagerDidUpdateState(_ central: CBCentralManager) {
         guard central.state == .poweredOn else {
-            print("Central is not powered on")
             return
         }
         startScanning()
-        print("central.state is .poweredOn")
     }
 
     func centralManager(_ central: CBCentralManager,
@@ -115,7 +115,6 @@ extension BluetoothRepository: CBCentralManagerDelegate {
     }
 
     func centralManager(_ central: CBCentralManager, didConnect peripheral: CBPeripheral) {
-        print("Connected")
         guard let currentPeripheral = peripheralDevice else {
             return
         }
@@ -131,7 +130,7 @@ extension BluetoothRepository: CBCentralManagerDelegate {
     }
 
     func centralManager(_ central: CBCentralManager, didFailToConnect peripheral: CBPeripheral, error: Error?) {
-        print(error?.localizedDescription)
+        print(error?.localizedDescription ?? "Unknown")
     }
 }
 

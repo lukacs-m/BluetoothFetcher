@@ -32,9 +32,3 @@ struct ServiceAndCharsTile: View {
         }.padding(2)
     }
 }
-
-// struct ServiceAndCharsTile_Previews: PreviewProvider {
-//    static var previews: some View {
-//        ServiceAndCharsTile(service: <#CBService#>, characteristics: <#[CBCharacteristic]#>)
-//    }
-// }
