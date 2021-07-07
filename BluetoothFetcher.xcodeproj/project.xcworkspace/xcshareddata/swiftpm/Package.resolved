@@ -1,0 +1,25 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "Resolver",
+        "repositoryURL": "https://github.com/hmlongco/Resolver.git",
+        "state": {
+          "branch": null,
+          "revision": "48e26b8fdf22877cd89b4a1f3927a56cc9f34d46",
+          "version": "1.4.3"
+        }
+      },
+      {
+        "package": "SwiftUICombineToolBox",
+        "repositoryURL": "https://github.com/lukacs-m/SwiftUICombineToolBox",
+        "state": {
+          "branch": null,
+          "revision": "8690d1cdf7e05ee25ab3179144584f593fb2aee2",
+          "version": "0.0.11"
+        }
+      }
+    ]
+  },
+  "version": 1
+}

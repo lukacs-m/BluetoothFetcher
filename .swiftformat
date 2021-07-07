@@ -1,0 +1,37 @@
+# https://github.com/nicklockwood/SwiftFormat/blob/master/Rules.md
+# format options
+
+--symlinks ignore
+--swiftversion 5.3
+
+# rules
+--enable isEmpty
+--disable andOperator
+--disable wrapMultilineStatementBraces
+
+# format options
+
+--closingparen same-line
+--commas inline
+--comments indent
+--decimalgrouping 3,5
+--exponentcase lowercase
+--exponentgrouping disabled
+--extensionacl on-extension
+--fractiongrouping disabled
+--ifdef no-indent
+--importgrouping testable-top
+--operatorfunc no-space
+--nospaceoperators ..<, ...
+--selfrequired validate
+--stripunusedargs closure-only
+--wraparguments after-first
+--wrapcollections after-first
+--wrapparameters after-first
+--disable wrapArguments
+--indent 4
+--maxwidth 180
+--wrapcollections before-first
+
+# disabled rules
+--exclude Carthage,*Tests/**,Core
